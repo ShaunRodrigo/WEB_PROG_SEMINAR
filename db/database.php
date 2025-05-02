@@ -10,7 +10,6 @@ try {
     
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
-    r
     echo "Connection failed: " . $e->getMessage();
     exit;
 }
