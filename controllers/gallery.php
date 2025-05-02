@@ -56,9 +56,7 @@ $images = array_diff(scandir('uploads/'), array('..', '.'));
             <div class="gallery-grid">
                 <?php foreach ($images as $image) : ?>
                     <div class="gallery-item">
-                        <a href="#<?= htmlspecialchars($image) ?>" class="image-link">
-                            <img src="uploads/<?= htmlspecialchars($image) ?>" alt="<?= htmlspecialchars($image) ?>" class="gallery-img">
-                        </a>
+                        <img src="uploads/<?= htmlspecialchars($image) ?>" alt="<?= htmlspecialchars($image) ?>">
                     </div>
                 <?php endforeach; ?>
             </div>
@@ -66,12 +64,4 @@ $images = array_diff(scandir('uploads/'), array('..', '.'));
             <p class="no-images">No images uploaded yet.</p>
         <?php endif; ?>
     </section>
-
-    <!-- Modals for Enlarged Images -->
-    <?php foreach ($images as $image) : ?>
-        <div id="<?= htmlspecialchars($image) ?>" class="modal">
-            <a href="#" class="close-btn">&times;</a>
-            <img class="modal-content" src="uploads/<?= htmlspecialchars($image) ?>" alt="<?= htmlspecialchars($image) ?>">
-        </div>
-    <?php endforeach; ?>
 </main>
