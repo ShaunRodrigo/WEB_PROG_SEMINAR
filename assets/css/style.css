@@ -286,3 +286,105 @@ textarea {
         width: 90%;
     }
 }
+
+/* === Gallery Page Styles === */
+.gallery-page {
+    padding: 60px 20px;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+/* Section Header */
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: #bbb;
+}
+
+/* Upload Form */
+.upload-form {
+    max-width: 500px;
+    margin: 0 auto 60px;
+    background-color: #2c3e50;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+.upload-form input[type="file"] {
+    display: block;
+    margin: 20px auto;
+    background-color: #222;
+    color: #ddd;
+    border: 2px solid #444;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 100%;
+}
+
+.upload-message {
+    margin-bottom: 15px;
+    color: #00c853;
+    font-weight: bold;
+}
+
+/* Gallery Grid */
+.image-gallery .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+    padding: 0 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual Image Item */
+.gallery-item {
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    aspect-ratio: 3 / 4; /* or 4 / 3, depending on the look you want */
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
+}
+
+.no-images {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .upload-form {
+        width: 90%;
+    }
+
+    .gallery-item {
+        margin-bottom: 20px;
+    }
+}
