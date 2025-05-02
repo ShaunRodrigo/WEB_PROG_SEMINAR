@@ -1,9 +1,5 @@
 <?php
-include 'header.php';
 include 'db/database.php';
-
-// Start the session
-session_start();
 
 // Check if the user is logged in
 if (!isset($_SESSION['user'])) {
@@ -43,5 +39,4 @@ if (!isset($_SESSION['user'])) {
     echo "</div>"; // Close messages-page div
 }
 
-include 'footer.php';
 ?>
