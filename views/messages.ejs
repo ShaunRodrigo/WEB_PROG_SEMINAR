@@ -1,0 +1,17 @@
+<h1>Messages</h1>
+<p>Welcome <%= user.username %>!</p>
+
+<ul>
+  <% if (messages && messages.length > 0) { %>
+    <% messages.forEach(msg => { %>
+      <li>
+        <strong><%= msg.first_name %> <%= msg.last_name %></strong>: <%= msg.message %>
+        <br>
+        <small>Sent at: <%= new Date(msg.created_at).toLocaleString() %></small>
+      </li>
+    <% }) %>
+  <% } else { %>
+    <li>No messages yet.</li>
+  <% } %>
+</ul>
+
